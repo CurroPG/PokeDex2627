@@ -35,8 +35,15 @@ class PokemonRemoteDataSource
         }
     }
 
-    override suspend fun readPokemonById(id: Int): Pokemon {
-        TODO("Not yet implemented")
+    override suspend fun readPokemonById(id: Int): Pokemon? {
+        val response = _api.readPokemonById(id)
+        if (response.isSuccessful) {
+            val body = response.body()!!
+            return body.toModel()
+        }
+        else {
+            return null
+        }
     }
 
 }

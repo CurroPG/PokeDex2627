@@ -5,10 +5,11 @@ import com.alanturing.pokeapp2627.features.pokemon.data.remote.PokemonRemoteData
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
-import jakarta.inject.Singleton
+import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
 @Module
-@InstallIn(Singleton::class)
+@InstallIn(SingletonComponent::class)
 interface AppModule {
 
     @Binds
