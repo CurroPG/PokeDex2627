@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.alanturing.pokeapp2627.features.pokemon.viewModel.PokemonListScreen
 import com.alanturing.pokeapp2627.ui.theme.PokeApp2627Theme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -22,6 +23,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             PokeApp2627Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    PokemonListScreen()
                 }
             }
         }
